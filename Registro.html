@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Registro.css">
+    <title>Registro</title>
+</head>
+<body>
+    <div>>x</div>
+     <div class="form-container">
+    <h2>Registrarse</h2>
+
+    <!-- 🧍 Nombre -->
+    <div class="input-group">
+      <i class="fas fa-user"></i>
+      <input type="text" id="nombre" placeholder=" " required />
+      <label for="nombre">Nombre completo</label>
+    </div>
+
+    <!-- 📧 Correo -->
+    <div class="input-group">
+      <i class="fas fa-envelope"></i>
+      <input type="email" id="correo" placeholder=" " required />
+      <label for="correo">Correo electrónico</label>
+    </div>
+
+    <!-- 🔒 Contraseña -->
+    <div class="input-group">
+      <i class="fas fa-lock"></i>
+      <input type="password" id="password" placeholder=" " required />
+      <label for="password">Contraseña</label>
+    </div>
+
+    <!-- ☎️ Teléfono -->
+    <div class="input-group">
+      <i class="fas fa-phone"></i>
+      <input type="tel" id="telefono" placeholder=" " />
+      <label for="telefono">Teléfono</label>
+    </div>
+
+    <!-- 📅 Fecha de nacimiento -->
+    <div class="input-group">
+      <i class="fas fa-calendar"></i>
+      <input type="date" id="fecha" placeholder=" " />
+      <label for="fecha">Fecha de nacimiento</label>
+    </div>
+
+    <!-- ✅ Aceptar términos -->
+    <div class="terms">
+      <input type="checkbox" id="terminos" required />
+      <label for="terminos">Acepto los términos y condiciones</label>
+    </div>
+
+    <!-- 🔘 Botón -->
+    <button type="submit" class="btn">Crear cuenta</button>
+
+    <!-- 🔗 Ya tiene cuenta -->
+    <div class="login-link">
+      ¿Ya tenés cuenta? <a href="#">Iniciar sesión</a>
+    </div>
+  </div>
+</body>
+</html>
