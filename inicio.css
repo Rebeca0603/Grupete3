@@ -22,11 +22,9 @@ body {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
-  animation: fadeIn 1s ease;
+  animation: fadeInLeft 2s ease;
   margin-left: 150px;
   margin-right: auto;
-;
-
 }
 
 /* Título */
