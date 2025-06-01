@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #7e90d8;
+  background: linear-gradient(135deg, #fffde4 0%, #fff9a9 33%, #ffe066 66%, #ffd600 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -138,3 +138,17 @@ body {
   }
 }
 
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+}
+
+.fade-out-Right {
+  animation: fadeOutRight 0.7s forwards;
+}

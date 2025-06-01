@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #7e90d8;
+  background: linear-gradient(135deg, #fffde4 0%, #fff9a9 33%, #ffe066 66%, #ffd600 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +16,7 @@ body {
 
 /* Contenedor del formulario */
 .form-container {
-  background: #fefefe;
+  background: #ffffff;
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -31,7 +31,7 @@ body {
 .form-container h2 {
   text-align: center;
   margin-bottom: 30px;
-  color: #2f3542;
+  color: #000000;
 }
 
 /* Grupo de input con ícono */
@@ -128,7 +128,7 @@ body {
 }
 
 /* Animación de entrada */
-@keyframes fadeIn {
+@keyframes fadeInLeft {
   from {
     opacity: 0;
     transform: translateY(30px);
@@ -137,20 +137,7 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
-  
 }
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(20px);
-  }
+.fade-out-Left {
+  animation: fadeOutLeft 0.7s forwards;
 }
-
-.fade-out {
-  animation: fadeOut 0.5s forwards;
-}
-

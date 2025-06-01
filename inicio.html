@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="inicio.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <title>Registro</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="inicio.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <title>Registro</title>
 </head>
 <body>
-     <div class="form-container" id="form-container">
+  <div class="form-container" id="form-container">
     <h2>Iniciar sesion</h2>
 
     <!-- 📧 Correo -->
@@ -25,10 +25,6 @@
       <label for="password">Contraseña</label>
     </div>
 
- 
-
-   
-
     <!-- ✅ Aceptar términos -->
     <div class="terms">
       <input type="checkbox" id="terminos" required />
@@ -39,8 +35,24 @@
     <button type="submit" class="btn">Iniciar sesion</button>
 
     <!-- 🔗 crear cuenta -->
-  <div class="login-link">
+    <div class="login-link">
     ¿Desea registrarse? <a href="Registro.html" class="btn-link">Crear Cuenta</a>
+    </div>
   </div>
+  <script>
+    // Selecciona el enlace con la clase 'btn-link' (Crear Cuenta)
+    document.querySelector('.btn-link').addEventListener('click', function(e) {
+    // Previene el comportamiento por defecto del enlace (no navega inmediatamente)
+    e.preventDefault();
+    // Selecciona el contenedor del formulario
+    const form = document.querySelector('.form-container');
+    // Agrega la clase de animación de salida al formulario
+    form.classList.add('fade-out-Left');
+    // Cuando termina la animación, redirige a la página de registro
+    form.addEventListener('animationend', function() {
+      window.location.href = 'Registro.html';
+    }, { once: true }); // El evento se ejecuta solo una vez
+    });
+  </script>
 </body>
 </html>
