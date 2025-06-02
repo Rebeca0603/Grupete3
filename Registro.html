@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="Registro.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <title>Registro</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
       <div class="input-group">
         <i class="fas fa-user"></i>
         <input type="text" id="nombre" placeholder=" " required />
-        <label for="nombre">Nombre completo</label>
+        <label for="nombre"> Nombre completo</label>
       </div>
 
       <!-- 📧 Correo -->
@@ -60,20 +61,6 @@
         ¿Ya tenés cuenta? <a href="inicio.html" class="btn-link">Iniciar Sesión</a>
       </div>
   </div>
-  <script>
-    // Selecciona el enlace con la clase 'btn-link' (Iniciar Sesión)
-    document.querySelector('.btn-link').addEventListener('click', function(e) {
-    // Previene el comportamiento por defecto del enlace (no navega inmediatamente)
-    e.preventDefault();
-    // Selecciona el contenedor del formulario
-    const form = document.querySelector('.form-container');
-    // Agrega la clase de animación de salida al formulario
-    form.classList.add('fade-out-Right');
-    // Cuando termina la animación, redirige a la página de registro  
-    form.addEventListener('animationend', function() {
-      window.location.href = 'inicio.html';
-    }, { once: true }); // El evento se ejecuta solo una vez
-    });
-  </script>
+  <script src="Registro.js"></script>
 </body>
 </html>
