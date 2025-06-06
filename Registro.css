@@ -152,3 +152,42 @@ body {
 .fade-out-Right {
   animation: fadeOutRight 0.7s forwards;
 }
+/* Mensajes de validación */
+.validation-msg {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+/* Colores según validación */
+.validation-msg.valid {
+  color: green;
+}
+
+.validation-msg.invalid {
+  color: red;
+}
+/* Ajuste especial para grupo de contraseña */
+.password-group {
+  position: relative;
+}
+
+/* Ícono de mostrar/ocultar contraseña */
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+  color: #aaa;
+}
+
+/* Mensaje de validación desplazado a la izquierda del ojito */
+.password-group .validation-msg {
+  right: 40px;
+}

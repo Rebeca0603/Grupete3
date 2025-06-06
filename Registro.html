@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="Registro.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="Registro.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <title>Registro</title>
 </head>
 <body>
   <div class="form-container">
-      <h2>Registrarse</h2>
+    <h2>Registrarse</h2>
+    <form id="registroForm">
 
       <!-- 🧍 Nombre -->
       <div class="input-group">
         <i class="fas fa-user"></i>
         <input type="text" id="nombre" placeholder=" " required />
-        <label for="nombre"> Nombre completo</label>
+        <label for="nombre">Nombre completo</label>
       </div>
 
       <!-- 📧 Correo -->
@@ -24,13 +25,17 @@
         <i class="fas fa-envelope"></i>
         <input type="email" id="correo" placeholder=" " required />
         <label for="correo">Correo electrónico</label>
+        <span class="validation-msg" id="correo-msg"></span>
       </div>
 
       <!-- 🔒 Contraseña -->
-      <div class="input-group">
+      <div class="input-group password-group">
         <i class="fas fa-lock"></i>
         <input type="password" id="password" placeholder=" " required />
         <label for="password">Contraseña</label>
+        <span class="toggle-password">
+       </span>
+     <span class="validation-msg" id="password-msg"></span>
       </div>
 
       <!-- ☎️ Teléfono -->
@@ -60,6 +65,7 @@
       <div class="login-link">
         ¿Ya tenés cuenta? <a href="inicio.html" class="btn-link">Iniciar Sesión</a>
       </div>
+    </form>
   </div>
   <script src="Registro.js"></script>
 </body>
