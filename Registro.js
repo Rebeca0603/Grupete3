@@ -26,6 +26,7 @@ correoInput.addEventListener('input', () => {
   }
 });
 
+
 // Evaluación de contraseña en tiempo real
 passwordInput.addEventListener('input', () => {
   const pass = passwordInput.value;
@@ -57,31 +58,27 @@ passwordInput.addEventListener('input', () => {
   }
 });
 
-// ---------- Mostrar/ocultar contraseña ----------
-const togglePassword = document.getElementById('togglePassword');
-
-togglePassword.addEventListener('click', () => {
-  const isPassword = passwordInput.type === 'password';
-  passwordInput.type = isPassword ? 'text' : 'password';
-  togglePassword.classList.toggle('fa-eye');
-  togglePassword.classList.toggle('fa-eye-slash');
+// Mostrar/ocultar contraseña
+const togglePassword = document.getElementById("togglePassword");
+togglePassword.addEventListener("click", () => {
+  const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+  passwordInput.setAttribute("type", type);
+  togglePassword.classList.toggle("fa-eye-slash");
 });
 
-// ---------- Animación al hacer clic en "Iniciar Sesión" ----------
-document.querySelector('.btn-link').addEventListener('click', function(e) {
+// Animación de salida al iniciar sesión
+document.querySelector('.btn-link').addEventListener('click', function (e) {
   e.preventDefault();
   const form = document.querySelector('.form-container');
   form.classList.add('fade-out-Right');
-  form.addEventListener('animationend', function() {
+  form.addEventListener('animationend', function () {
     window.location.href = 'inicio.html';
   }, { once: true });
 });
 
-// ---------- Validación final al crear cuenta ----------
-const form = document.querySelector('.form-container');
-const btn = form.querySelector('.btn');
-
-btn.addEventListener('click', function(e) {
+// Validación final al enviar
+const form = document.querySelector('#registroForm');
+form.addEventListener('submit', function (e) {
   e.preventDefault();
 
   const nombre = form.querySelector('#nombre').value.trim();
@@ -101,7 +98,7 @@ btn.addEventListener('click', function(e) {
     return;
   }
   if (!passwordValido) {
-    alert('La contraseña debe tener al menos 6 caracteres');
+    alert('La contraseña no cumple los requisitos');
     return;
   }
   if (!terminos) {
@@ -110,5 +107,5 @@ btn.addEventListener('click', function(e) {
   }
 
   alert('Formulario enviado correctamente.');
-  // form.submit(); // Descomentar si querés enviar el formulario real
+  // form.submit(); // Descomentar para envío real
 });

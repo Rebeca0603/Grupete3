@@ -16,7 +16,7 @@ body {
 
 /* Contenedor del formulario */
 .form-container {
-  background: rgba(254, 254, 254, 0.30); /* Más transparente */
+  background: rgba(254, 254, 254, 0.30);
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -40,7 +40,7 @@ body {
 
 .input-group input {
   width: 100%;
-  padding: 14px 14px 14px 40px;
+  padding: 14px 40px 14px 40px; /* espacio a izquierda (icono) y derecha (ojo) */
   border: 1px solid #ccc;
   border-radius: 10px;
   background: none;
@@ -54,13 +54,14 @@ body {
   top: 50%;
   left: 40px;
   transform: translateY(-50%);
-  color: rgb(151, 154, 154); 
+  color: #aaa;
   pointer-events: none;
   transition: all 0.3s ease;
+  background: rgba(254, 254, 254, 0.02);
   padding: 0 4px;
 }
 
-/* Efecto de elevación al escribir */
+/* Elevación al escribir */
 .input-group input:focus + label,
 .input-group input:not(:placeholder-shown) + label {
   top: -10px;
@@ -70,7 +71,11 @@ body {
 }
 
 /* Ícono al costado izquierdo */
-.input-group i {
+.input-group i.fa-user,
+.input-group i.fa-envelope,
+.input-group i.fa-phone,
+.input-group i.fa-calendar,
+.input-group i.fa-lock {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -99,6 +104,7 @@ body {
   padding-left: 22px;
   position: relative;
 }
+
 .password-hint i {
   position: absolute;
   left: 0;
@@ -171,68 +177,29 @@ body {
   text-decoration: underline;
 }
 
-/* Animación de entrada */
-@keyframes fadeIn {
+/* Animaciones */
+@keyframes fadeInRight {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateX(100px);
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeOutLeft {
-  from {
     opacity: 1;
     transform: translateX(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateX(-100px);
   }
 }
 
 .fade-out-Right {
   animation: fadeOutRight 0.7s forwards;
 }
-/* Mensajes de validación */
-.validation-msg {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 13px;
-  font-weight: bold;
-  pointer-events: none;
-}
 
-/* Colores según validación */
-.validation-msg.valid {
-  color: green;
-}
-
-.validation-msg.invalid {
-  color: red;
-}
-/* Ajuste especial para grupo de contraseña */
-.password-group {
-  position: relative;
-}
-
-/* Ícono de mostrar/ocultar contraseña */
-.toggle-password {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  z-index: 2;
-  color: #aaa;
-}
-
-/* Mensaje de validación desplazado a la izquierda del ojito */
-.password-group .validation-msg {
-  right: 40px;
+@keyframes fadeOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100px);
+  }
 }
