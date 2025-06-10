@@ -1,9 +1,15 @@
-// ---------- Validación en tiempo real ----------
+// Inputs
 const correoInput = document.getElementById('correo');
 const passwordInput = document.getElementById('password');
 const correoMsg = document.getElementById('correo-msg');
-const passwordMsg = document.getElementById('password-msg');
 
+// Creamos el span de validación para la contraseña
+const passwordMsg = document.createElement('span');
+passwordMsg.id = 'password-msg';
+passwordMsg.className = 'validation-msg';
+passwordInput.parentElement.appendChild(passwordMsg);
+
+// Validación correo en tiempo real
 correoInput.addEventListener('input', () => {
   const email = correoInput.value;
   const regex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
@@ -20,17 +26,34 @@ correoInput.addEventListener('input', () => {
   }
 });
 
+// Evaluación de contraseña en tiempo real
 passwordInput.addEventListener('input', () => {
   const pass = passwordInput.value;
-  if (pass === '') {
+
+  const hasLower = /[a-z]/.test(pass);
+  const hasUpper = /[A-Z]/.test(pass);
+  const hasNumber = /[0-9]/.test(pass);
+  const hasSymbol = /[\W_]/.test(pass);
+  const length = pass.length;
+
+  if (length === 0) {
     passwordMsg.textContent = '';
     passwordMsg.className = 'validation-msg';
-  } else if (pass.length >= 6) {
-    passwordMsg.textContent = '✓';
+  } else if (length < 6 || /^[a-zA-Z]+$/.test(pass)) {
+    passwordMsg.textContent = 'Débil';
+    passwordMsg.className = 'validation-msg invalid';
+  } else if (length >= 6 && hasLower && hasNumber && !hasUpper && !hasSymbol) {
+    passwordMsg.textContent = 'Media';
+    passwordMsg.className = 'validation-msg medium';
+  } else if (length >= 8 && hasLower && hasUpper && hasNumber && !hasSymbol) {
+    passwordMsg.textContent = 'Buena';
+    passwordMsg.className = 'validation-msg good';
+  } else if (length >= 8 && hasLower && hasUpper && hasNumber && hasSymbol) {
+    passwordMsg.textContent = 'Alta';
     passwordMsg.className = 'validation-msg valid';
   } else {
-    passwordMsg.textContent = 'Mín. 6 caracteres';
-    passwordMsg.className = 'validation-msg invalid';
+    passwordMsg.textContent = 'Media';
+    passwordMsg.className = 'validation-msg medium';
   }
 });
 
