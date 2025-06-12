@@ -1,78 +1,78 @@
 /* Reset y base */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
+* { /* Selecciona todos los elementos */
+  box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total del elemento */
+  margin: 0; /* Elimina el margen por defecto */
+  padding: 0; /* Elimina el padding por defecto */
+  font-family: 'Segoe UI', sans-serif; /* Define la fuente principal */
 }
 
 body {
   background: linear-gradient(135deg, 
-    #fff700 0%,     
-    #faff70 33%,    
-    #faff70 66%,    
-    #d4d40a 100%    
+    #fff700 0%,     /* Color inicial del degradado */
+    #faff70 33%,    /* Segundo color del degradado */
+    #faff70 66%,    /* Tercer color del degradado */
+    #d4d40a 100%    /* Color final del degradado */
   );
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  display: flex; /* Usa flexbox para el layout */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
+  min-height: 100vh; /* Altura mínima igual al alto de la ventana */
 }
 
 /* Contenedor del formulario */
 .form-container {
-  background: rgba(254, 254, 254, 0.15);
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
-  animation: fadeInRight 2s ease;
+  background: rgba(254, 254, 254, 0.15); /* Fondo semitransparente */
+  padding: 40px; /* Espaciado interno */
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Sombra */
+  width: 100%; /* Ocupa todo el ancho posible */
+  max-width: 400px; /* Ancho máximo */
+  animation: fadeInRight 2s ease; /* Animación de entrada */
 }
 
 /* Título */
 .form-container h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #2f3542;
+  text-align: center; /* Centra el texto */
+  margin-bottom: 30px; /* Espacio debajo del título */
+  color: #2f3542; /* Color del texto */
 }
 
 /* Grupo de input con ícono */
 .input-group {
-  position: relative;
-  margin-bottom: 25px;
+  position: relative; /* Posicionamiento relativo para los hijos absolutos */
+  margin-bottom: 25px; /* Espacio debajo del grupo */
 }
 
 .input-group input {
-  width: 100%;
-  padding: 14px 40px 14px 40px; /* espacio a izquierda (icono) y derecha (ojo) */
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background: none;
-  outline: none;
-  transition: all 0.3s ease;
+  width: 100%; /* Ocupa todo el ancho del grupo */
+  padding: 14px 40px 14px 40px; /* Espaciado interno: arriba, derecha, abajo, izquierda */
+  border: 1px solid #ccc; /* Borde gris claro */
+  border-radius: 10px; /* Bordes redondeados */
+  background: none; /* Sin fondo */
+  outline: none; /* Sin contorno al enfocar */
+  transition: all 0.3s ease; /* Transición suave para todos los cambios */
 }
 
 /* Label flotante */
 .input-group label {
-  position: absolute;
-  top: 50%;
-  left: 40px;
-  transform: translateY(-50%);
-  color: #aaa;
-  pointer-events: none;
-  transition: all 0.3s ease;
-  background: rgba(254, 254, 254, 0.02);
-  padding: 0 4px;
+  position: absolute; /* Posicionamiento absoluto dentro del grupo */
+  top: 50%; /* Centrado vertical */
+  left: 40px; /* Separación desde la izquierda */
+  transform: translateY(-50%); /* Ajuste fino para centrar verticalmente */
+  color: #aaa; /* Color gris claro */
+  pointer-events: none; /* El label no recibe eventos del mouse */
+  transition: all 0.3s ease; /* Transición suave */
+  background: rgba(254, 254, 254, 0.02); /* Fondo casi transparente */
+  padding: 0 4px; /* Espaciado horizontal */
 }
 
 /* Elevación al escribir */
 .input-group input:focus + label,
 .input-group input:not(:placeholder-shown) + label {
-  top: -10px;
-  left: 30px;
-  font-size: 12px;
-  color: #1e90ff;
+  top: -10px; /* Sube el label */
+  left: 30px; /* Ajusta la posición a la izquierda */
+  font-size: 12px; /* Reduce el tamaño de fuente */
+  color: #1e90ff; /* Cambia el color a azul */
 }
 
 /* Ícono al costado izquierdo */
@@ -81,130 +81,130 @@ body {
 .input-group i.fa-phone,
 .input-group i.fa-calendar,
 .input-group i.fa-lock {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  transform: translateY(-50%);
-  color: #aaa;
+  position: absolute; /* Posicionamiento absoluto */
+  top: 50%; /* Centrado vertical */
+  left: 12px; /* Separación desde la izquierda */
+  transform: translateY(-50%); /* Ajuste fino para centrar verticalmente */
+  color: #aaa; /* Color gris claro */
 }
 
 /* Ícono de mostrar/ocultar contraseña */
 .toggle-password {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  z-index: 1;
-  color: #aaa;
-  font-size: 16px;
+  position: absolute; /* Posicionamiento absoluto */
+  right: 12px; /* Separación desde la derecha */
+  top: 50%; /* Centrado vertical */
+  transform: translateY(-50%); /* Ajuste fino para centrar verticalmente */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  z-index: 1; /* Prioridad sobre otros elementos */
+  color: #aaa; /* Color gris claro */
+  font-size: 16px; /* Tamaño del ícono */
 }
 
-/* Mensaje de  abajo el campo de contraseña */
+/* Mensaje de abajo el campo de contraseña */
 .password-hint {
-  font-size: 13px;
-  color: #555;
-  margin-top: -15px;
-  margin-bottom: 20px;
-  padding-left: 22px;
-  position: relative;
+  font-size: 13px; /* Tamaño de fuente pequeño */
+  color: #555; /* Color gris oscuro */
+  margin-top: -15px; /* Espacio negativo arriba */
+  margin-bottom: 20px; /* Espacio debajo */
+  padding-left: 22px; /* Espacio a la izquierda para el ícono */
+  position: relative; /* Para posicionar el ícono dentro */
 }
 
 .password-hint i {
-  position: absolute;
-  left: 0;
-  top: 2px;
-  color: #888;
+  position: absolute; /* Posicionamiento absoluto */
+  left: 0; /* Pegado a la izquierda */
+  top: 2px; /* Ligeramente hacia abajo */
+  color: #888; /* Color gris medio */
 }
 
 /* Mensajes de validación */
 .validation-msg {
-  position: absolute;
-  right: 35px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 13px;
-  font-weight: bold;
-  pointer-events: none;
+  position: absolute; /* Posicionamiento absoluto */
+  right: 35px; /* Separación desde la derecha */
+  top: 50%; /* Centrado vertical */
+  transform: translateY(-50%); /* Ajuste fino para centrar verticalmente */
+  font-size: 13px; /* Tamaño de fuente pequeño */
+  font-weight: bold; /* Texto en negrita */
+  pointer-events: none; /* No recibe eventos del mouse */
 }
 
 .validation-msg.valid {
-  color: green;
+  color: green; /* Color verde para válido */
 }
 
 .validation-msg.invalid {
-  color: red;
+  color: red; /* Color rojo para inválido */
 }
 
 /* Checkbox */
 .terms {
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  margin-bottom: 20px;
+  display: flex; /* Usa flexbox para alinear elementos */
+  align-items: center; /* Centra verticalmente */
+  font-size: 14px; /* Tamaño de fuente */
+  margin-bottom: 20px; /* Espacio debajo */
 }
 
 .terms input {
-  margin-right: 8px;
+  margin-right: 8px; /* Espacio a la derecha del checkbox */
 }
 
 /* Botón */
 .btn {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  background-color: #1e90ff;
-  color: white;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+  width: 100%; /* Ocupa todo el ancho */
+  padding: 12px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  background-color: #1e90ff; /* Fondo azul */
+  color: white; /* Texto blanco */
+  border-radius: 10px; /* Bordes redondeados */
+  font-weight: bold; /* Texto en negrita */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  transition: background 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
 }
 
 .btn:hover {
-  background-color: #0066cc;
-  transform: scale(1.02);
+  background-color: #0066cc; /* Cambia el color de fondo al pasar el mouse */
+  transform: scale(1.02); /* Aumenta ligeramente el tamaño */
 }
 
 /* Link de inicio de sesión */
 .login-link {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 14px;
+  text-align: center; /* Centra el texto */
+  margin-top: 20px; /* Espacio arriba */
+  font-size: 14px; /* Tamaño de fuente */
 }
 
 .login-link a {
-  color: #1e90ff;
-  text-decoration: none;
+  color: #1e90ff; /* Color azul */
+  text-decoration: none; /* Sin subrayado */
 }
 
 .login-link a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Subraya al pasar el mouse */
 }
 
 /* Animaciones */
 @keyframes fadeInRight {
   from {
-    opacity: 0;
-    transform: translateX(100px);
+    opacity: 0; /* Comienza transparente */
+    transform: translateX(100px); /* Desplazado a la derecha */
   }
   to {
-    opacity: 1;
-    transform: translateX(0);
+    opacity: 1; /* Termina opaco */
+    transform: translateX(0); /* Vuelve a su posición original */
   }
 }
 
 .fade-out-Right {
-  animation: fadeOutRight 0.7s forwards;
+  animation: fadeOutRight 0.7s forwards; /* Aplica la animación de salida */
 }
 
 @keyframes fadeOutRight {
   from {
-    opacity: 1;
-    transform: translateX(0);
+    opacity: 1; /* Comienza opaco */
+    transform: translateX(0); /* Posición original */
   }
   to {
-    opacity: 0;
-    transform: translateX(100px);
+    opacity: 0; /* Termina transparente */
+    transform: translateX(100px); /* Se desplaza a la derecha */
   }
 }

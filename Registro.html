@@ -1,76 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Indica el tipo de documento HTML5 -->
+<html lang="en"> <!-- Comienza el documento HTML, idioma inglés -->
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="Registro.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <title>Registro</title>
+  <meta charset="UTF-8" /> <!-- Define la codificación de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Hace que la página sea responsive -->
+  <link rel="stylesheet" href="Registro.css" /> <!-- Vincula la hoja de estilos local -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> <!-- Vincula la librería Animate.css para animaciones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/> <!-- Vincula Font Awesome para íconos -->
+  <title>Registro</title> <!-- Título de la pestaña del navegador -->
 </head>
-<body>
-  <div class="form-container">
-    <h2>Registrarse</h2>
-    <form id="registroForm">
+<body> <!-- Comienza el cuerpo de la página -->
+  <div class="form-container"> <!-- Contenedor principal del formulario -->
+    <h2>Registrarse</h2> <!-- Título del formulario -->
+    <form id="registroForm"> <!-- Formulario de registro -->
 
       <!-- 🧍 Nombre -->
-      <div class="input-group">
-        <i class="fas fa-user"></i>
-        <input type="text" id="nombre" placeholder=" " required />
-        <label for="nombre">Nombre completo</label>
+      <div class="input-group"> <!-- Grupo de input con ícono -->
+        <i class="fas fa-user"></i> <!-- Ícono de usuario -->
+        <input type="text" id="nombre" placeholder=" " required /> <!-- Campo de texto para el nombre, obligatorio -->
+        <label for="nombre">Nombre completo</label> <!-- Etiqueta flotante para el campo nombre -->
       </div>
 
       <!-- 📧 Correo -->
       <div class="input-group">
-        <i class="fas fa-envelope"></i>
-        <input type="email" id="correo" placeholder=" " required />
-        <label for="correo">Correo electrónico</label>
-        <span class="validation-msg" id="correo-msg"></span>
+        <i class="fas fa-envelope"></i> <!-- Ícono de sobre para correo -->
+        <input type="email" id="correo" placeholder=" " required /> <!-- Campo de email, obligatorio -->
+        <label for="correo">Correo electrónico</label> <!-- Etiqueta flotante para correo -->
+        <span class="validation-msg" id="correo-msg"></span> <!-- Mensaje de validación para correo -->
       </div>
 
       <!-- 🔒 Contraseña -->
-      <div class="input-group password-group">
-        <i class="fas fa-lock"></i>
-        <input type="password" id="password" name="password" placeholder=" " required />
-        <label for="password">Contraseña</label>
-        <i class="fas fa-eye toggle-password" id="togglePassword"></i>
-        <span class="validation-msg" id="password-msg"></span>
+      <div class="input-group password-group"> <!-- Grupo de input para contraseña -->
+        <i class="fas fa-lock"></i> <!-- Ícono de candado -->
+        <input type="password" id="password" name="password" placeholder=" " required /> <!-- Campo de contraseña, obligatorio -->
+        <label for="password">Contraseña</label> <!-- Etiqueta flotante para contraseña -->
+        <i class="fas fa-eye toggle-password" id="togglePassword"></i> <!-- Ícono para mostrar/ocultar contraseña -->
+        <span class="validation-msg" id="password-msg"></span> <!-- Mensaje de validación para contraseña -->
       </div>
 
-      <div class="password-hint">
-        <i class="fas fa-info-circle"></i>
+      <div class="password-hint"> <!-- Sugerencia de contraseña -->
+        <i class="fas fa-info-circle"></i> <!-- Ícono de información -->
         Las contraseñas deben tener al menos 8 caracteres e incluir una combinación de letras mayúsculas, letras minúsculas, números y símbolos.
       </div>
 
       <!-- ☎️ Teléfono -->
       <div class="input-group">
-        <i class="fas fa-phone"></i>
-        <input type="number" id="telefono" placeholder=" " />
-        <label for="telefono">Teléfono</label>
+        <i class="fas fa-phone"></i> <!-- Ícono de teléfono -->
+        <input type="number" id="telefono" placeholder=" " /> <!-- Campo para teléfono (opcional) -->
+        <label for="telefono">Teléfono</label> <!-- Etiqueta flotante para teléfono -->
       </div>
 
       <!-- 📅 Fecha de nacimiento -->
       <div class="input-group">
-        <i class="fas fa-calendar"></i>
-        <input type="date" id="fecha" placeholder=" " />
-        <label for="fecha">Fecha de nacimiento</label>
+        <i class="fas fa-calendar"></i> <!-- Ícono de calendario -->
+        <input type="date" id="fecha" placeholder=" " /> <!-- Campo para fecha de nacimiento (opcional) -->
+        <label for="fecha">Fecha de nacimiento</label> <!-- Etiqueta flotante para fecha -->
       </div>
 
       <!-- ✅ Aceptar términos -->
-      <div class="terms">
-        <input type="checkbox" id="terminos" required />
-        <label for="terminos">Acepto los términos y condiciones</label>
+      <div class="terms"> <!-- Grupo para el checkbox de términos -->
+        <input type="checkbox" id="terminos" required /> <!-- Checkbox obligatorio para aceptar términos -->
+        <label for="terminos">Acepto los términos y condiciones</label> <!-- Etiqueta para el checkbox -->
       </div>
 
       <!-- 🔘 Botón -->
-      <button type="submit" class="btn">Crear cuenta</button>
+      <button type="submit" class="btn">Crear cuenta</button> <!-- Botón para enviar el formulario -->
 
       <!-- 🔗 Ya tiene cuenta -->
-      <div class="login-link">
-        ¿Ya tenés cuenta? <a href="inicio.html" class="btn-link">Iniciar Sesión</a>
+      <div class="login-link"> <!-- Enlace para usuarios ya registrados -->
+        ¿Ya tenés cuenta? <a href="inicio.html" class="btn-link">Iniciar Sesión</a> <!-- Link a la página de inicio de sesión -->
       </div>
     </form>
   </div>
-  <script src="Registro.js"></script>
+  <script src="Registro.js"></script> <!-- Vincula el archivo JavaScript para la lógica del formulario -->
 </body>
 </html>
