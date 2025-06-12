@@ -7,7 +7,12 @@
 }
 
 body {
-  background: linear-gradient(135deg, #fffde4 0%, #fff9a9 33%, #ffe066 66%, #ffd600 100%);
+  background: linear-gradient(135deg, 
+    #fff700 0%,     
+    #faff70 33%,    
+    #faff70 66%,    
+    #d4d40a 100%    
+  );
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +21,7 @@ body {
 
 /* Contenedor del formulario */
 .form-container {
-  background: rgba(254, 254, 254, 0.30);
+  background: rgba(254, 254, 254, 0.15);
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
