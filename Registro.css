@@ -21,7 +21,7 @@ body {
 
 /* Contenedor del formulario */
 .form-container {
-  background: rgba(254, 254, 254, 0.15); /* Fondo semitransparente */
+  background: rgba(254, 254, 254, 0.5); /* Fondo semitransparente */
   padding: 40px; /* Espaciado interno */
   border-radius: 20px; /* Bordes redondeados */
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Sombra */
